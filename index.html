@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" class="dark-mode">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Countries</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header class="header-cont">
+        <nav class="header__nav">
+            Where in the world?
+            <button class="theme-btn">Change Theme</button>
+        </nav>
+    </header>
+
+    <section>
+        <div role="search" class="search-cont">
+            <label for="search-bar">
+                <i class="fas fa-search"></i><input type="search" name="search-bar" id="search-bar" placeholder=" Search for a country">
+            </label>
+        </div>
+
+        <div role="option" class="filter-cont">
+                <label for="filter-country">
+                <select name="filter-country" id="filter-country">
+                    <option value="" selected>Filter by Region</option>
+                    <option value="Africa">Africa</option>
+                    <option value="Americas">America</option>
+                    <option value="Asia">Asia</option>
+                    <option value="Europe">Europe</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+            </label>
+        </div>
+    </section>
+
+    <main class="main-cont">
+    </main>
+    
+    <script src="./js/main.js" type="module"></script>
+</body>
+</html>
