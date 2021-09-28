@@ -31,9 +31,11 @@ Learn better ways to load faster all the data from the api.
 
 **Note: Delete this note and the content within this section and replace with your own plans for continued development.**
 
+### Live Web Site
+https://naughty-varahamihira-f53ef2.netlify.app/index.html
 
 
 ## Author
 
-- Website - [Add your name here](https://github.com/adiltonss)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/adiltonss)
+- Website - [Git Hub Repository](https://github.com/adiltonss)
+- Frontend Mentor - [Front end Mentor Page](https://www.frontendmentor.io/profile/adiltonss)
