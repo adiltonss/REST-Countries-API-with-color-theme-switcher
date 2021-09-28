@@ -32,7 +32,7 @@ function init(data){
         document.querySelector('.main-cont').innerHTML = '';
         if(e.target.value !== ''){
             for(let i = 0; i < finalItems.length; i++){
-                if(e.target.value === finalItems[i].continent){
+                if(e.target.value === finalItems[i].region){
                     result.push(finalItems[i]);
                 }
             }
@@ -50,7 +50,7 @@ function init(data){
     document.querySelector('#search-bar').addEventListener("input", (e)=>{
         if(e.target.value.length > 1){
             let obj = finalItems.filter((country) => {
-                return (country.name.toLowerCase().includes(e.target.value) || country.nativeName.toLowerCase().includes(e.target.value))
+                return (country.name.toLowerCase().includes(e.target.value.toLowerCase()) || country.nativeName.toLowerCase().includes(e.target.value.toLowerCase()) || country.region.toLowerCase().includes(e.target.value.toLowerCase()))
             });
             if(obj){
                 document.querySelector(".main-cont").innerHTML = '';
