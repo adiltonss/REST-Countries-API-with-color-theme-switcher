@@ -66,6 +66,7 @@ function init(data){
 }
 
 function renderDivs(obj){
+    let sub = 'Unknown';
     let countryDiv = document.createElement("div");
     countryDiv.classList = "country";
     let flagDiv = document.createElement("div");
@@ -74,7 +75,7 @@ function renderDivs(obj){
     let flaglink = document.createElement('a');
     flaglink.setAttribute('href', "details.html");
     flaglink.classList = "img-cont";
-    flaglink.innerHTML = `<img class="flag" src="${obj.flags[0]}" alt="${obj.name} Flag Image">`
+    flaglink.innerHTML = `<img class="flag" src="${obj.flags[0] || obj.flags.svg || obj.flags.png}" alt="${obj.name} Flag Image">`
     flagDiv.appendChild(flaglink);
     let nameSpan = document.createElement("span");
     nameSpan.classList = "country-name";
@@ -84,9 +85,9 @@ function renderDivs(obj){
     descDiv.classList = "desc-cont";
     descDiv.innerHTML = 
     `
-        <span class="capital"><strong>Capital:</strong> ${obj.capital}</span>    
-        <span class="region"><strong>Region:</strong> ${obj.region}</span>
-        <p><strong>Population :</strong> ${obj.population.toLocaleString()}</p>
+        <span class="capital"><strong>Capital:</strong> ${obj.capital || sub}</span>    
+        <span class="region"><strong>Region:</strong> ${obj.region || sub}</span>
+        <p><strong>Population :</strong> ${obj.population.toLocaleString() || sub}</p>
     `
     countryDiv.appendChild(descDiv);
     document.querySelector(".main-cont").appendChild(countryDiv);
@@ -106,7 +107,7 @@ function updateLinks(list, arr){
     objs = list;
     objs.forEach(el =>{
         el.addEventListener('click', (e)=>{
-            let obj = arr.find(obj => obj.flags[0] === e.target.src);
+            let obj = arr.find(obj => obj.flags.svg === e.target.src);
             saveInLocal(obj);
         })
     })

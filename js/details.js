@@ -38,27 +38,31 @@ function createR(e){
             throw new Error(error.message)
         });
 }
+/* [0].flags.svg */
+
+/* continente = [0].region */
 
 function createContent(obj){
+    let sub = "";
     document.querySelector(".flag-cont").innerHTML = '';
     document.querySelector(".sub-details-1").innerHTML = '';
     document.querySelector(".sub-details-2").innerHTML = '';
     document.querySelector(".border-countries").innerHTML = '';
 
-    document.querySelector(".flag-cont").innerHTML = `<img class="flag" src="${obj[0].flags[0]}" alt="${obj[0].name} Flag Image">`;
+    document.querySelector(".flag-cont").innerHTML = `<img class="flag" src="${obj[0].flags.svg}" alt="${obj[0].name} Flag Image">`;
 
     document.querySelector(".sub-details-1").innerHTML =
     `
         <h2 class="contry-name-h2"> ${obj[0].name}</h2>
         <p><strong>Native Name:</strong> ${obj[0].nativeName}</p>
-        <p><strong>Population:</strong> ${obj[0].population.toLocaleString()}</p>
-        <p><strong>Region:</strong> ${obj[0].region}</p>
-        <p><strong>Capital:</strong> ${obj[0].capital}</p>
-        <p><strong>Continent:</strong> ${obj[0].continent}</p>
+        <p><strong>Population:</strong> ${obj[0].population.toLocaleString() || sub}</p>
+        <p><strong>Region:</strong> ${obj[0].region || sub}</p>
+        <p><strong>Sub Region:</strong> ${obj[0].subregion || sub}</p>
+        <p><strong>Capital:</strong> ${obj[0].capital || sub}</p>
     `;
 
     document.querySelector(".sub-details-2").innerHTML = `
-        <p><strong>Currency:</strong> ${obj[0].currencies[0].name} (${obj[0].currencies[0].symbol})</p>
+        <p><strong>Currency:</strong> ${obj[0].currencies[0].name || sub} (${obj[0].currencies[0].symbol})</p>
         <p><strong>Languages:</strong> ${obj[0].languages[0].name}</p>                
         <p><strong>Calling Code:</strong> ${obj[0].callingCodes[0]}</p>                
         <p><strong>Numeric Code:</strong> ${obj[0].numericCode}</p>                
