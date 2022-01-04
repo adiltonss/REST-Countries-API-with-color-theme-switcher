@@ -22,17 +22,12 @@ Users should be able to:
 - CSS Grid
 - Mobile-first workflow
 
-**Note: These are just examples. Delete this note and replace the list above with your own choices**
-
-
 ### Continued development
-
 Learn better ways to load faster all the data from the api.
 
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
-
 ### Live Web Site
-https://naughty-varahamihira-f53ef2.netlify.app/index.html
+https://naughty-varahamihira-f53ef2.netlify.app/index.html  
+![Rest countries api](https://user-images.githubusercontent.com/83099533/148078638-15a6a32b-a84a-4609-a15f-149bab59afe9.png)
 
 
 ## Author
